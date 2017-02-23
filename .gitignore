@@ -12,6 +12,7 @@ gen
 
 cordova_dist/www/
 node_modules/
+bower_components/
 static/
 
 
