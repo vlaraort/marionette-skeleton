@@ -6,14 +6,6 @@ module.exports = {
     devtool: 'eval',
     module: {
         rules: [
-            // {
-            //     enforce: 'pre',
-            //     test: /\.js$/,
-            //     exclude: /(node_modules|bower_components)/,
-            //     //include: /app/,
-            //     loader: 'eslint-loader'
-            // },
-
             {
                 test: /\.js$/,
                 exclude: [/node_modules/],
@@ -25,27 +17,9 @@ module.exports = {
 
                 ],
             },
-            // {
-            //     test: /\.html$/,
-            //     use:  [{
-            //         loader: 'wc-loader',
-            //         exclude: [/node_modules/, /app\\templates/],
-            //
-            //     },{
-            //         loader: 'underscore-template-loader',
-            //         exclude: [/node_modules/, /bower_components/, /app\\webcomponents/],
-            //
-            //     }]
-            //
-            // },
             {
                 test: /\.html$/,
-                exclude: [/node_modules/, /app\\templates/],
-                use:  ['wc-loader']
-            },
-            {
-                test: /\.html$/,
-                exclude: [/node_modules/, /bower_components/, /app\\webcomponents/],
+                exclude: [/node_modules/],
                 use:  ['underscore-template-loader']
             },
             {
